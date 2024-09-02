@@ -8,8 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-// Add endpoint API explorer service, which helps with discovering endpoints for documentation
 builder.Services.AddEndpointsApiExplorer();
 // Add Swagger generation service to the container, enabling Swagger/OpenAPI documentation
 builder.Services.AddSwaggerGen();
